@@ -11,8 +11,10 @@ class MainActivity : AppCompatActivity() {
 
         try{
             val database =this.openOrCreateDatabase("database", Context.MODE_PRIVATE,null)
-            database.execSQL("CREATE TABLE IF NOT EXISTS pills(id INTEGER PRIMARY KEY,name VARCHAR,dosage FLOAT)")
-            database.execSQL("CREATE TABLE IF NOT EXISTS descriptions(id INTEGER PRIMARY KEY,description VARCHAR)")
+            database.execSQL("CREATE TABLE IF NOT EXISTS pill(id INTEGER PRIMARY KEY,name VARCHAR,miligram FLOAT, photoPath VARCHAR)")
+            database.execSQL("CREATE TABLE IF NOT EXISTS description(id INTEGER PRIMARY KEY, description VARCHAR , FOREIGN KEY(id) REFERENCES pill(id)) ")
+            database.execSQL("CREATE TABLE IF NOT EXISTS alarm(id INTEGER PRIMARY KEY,alarmTime DateTime , FOREIGN KEY(id) REFERENCES pill(id))")
+
 
 
 
