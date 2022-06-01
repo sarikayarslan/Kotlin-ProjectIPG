@@ -10,8 +10,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         try{
-            val database =this.openOrCreateDatabase("pill", Context.MODE_PRIVATE,null)
-            database.execSQL("CREATE TABLE IF NOT EXISTS pill(id INTEGER PRIMARY KEY,name VARCHAR)")
+            val database =this.openOrCreateDatabase("database", Context.MODE_PRIVATE,null)
+            database.execSQL("CREATE TABLE IF NOT EXISTS pills(id INTEGER PRIMARY KEY,name VARCHAR,dosage FLOAT)")
+            database.execSQL("CREATE TABLE IF NOT EXISTS descriptions(id INTEGER PRIMARY KEY,description VARCHAR)")
 
 
 
