@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">PillApp</string>
+    <string name="pillnametb">İlacınızın adı nedir?</string>
+    <string name="pillmgtb">İlacınız kaç mg?</string>
+    <string name="addbutton">Ekle</string>
+    <string name="textview">TextView</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
