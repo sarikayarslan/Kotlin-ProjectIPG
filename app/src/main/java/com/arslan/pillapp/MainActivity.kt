@@ -17,24 +17,21 @@ class MainActivity : AppCompatActivity() {
         val dao = AppDatabase.getInstance(this).appDao
 
         val pills= listOf(
-            Pill("1","Aspirin","Agrı Kesici",1),
-            Pill("2","denem2","Agrı Kesici Değil",2),
-            Pill("3","deneme3","Doğum Kontrol Hapı",3),
+            Pill("deneme","Aspirin",1),
+            Pill("deneme2","denem2",2),
+            Pill("deneme3","deneme3",3),
         )
 
         val alarms= listOf(
-            Alarm("7","Alarm1"),
-            Alarm("8","Alarm2"),
-            Alarm("9","Alarm3"),
+            Alarm("Alarm1"),
+            Alarm("Alarm2"),
+            Alarm("Alarm3"),
         )
 
         val pillAlarmRelations = listOf(
-            PillAlarmCrossRef("1","9"),
-            PillAlarmCrossRef("3","7"),
-            PillAlarmCrossRef("2","8"),
-            PillAlarmCrossRef("1","7"),
-            PillAlarmCrossRef("3","8"),
-            PillAlarmCrossRef("3","9"),
+            PillAlarmCrossRef("Aspirin","Alarm1"),
+            PillAlarmCrossRef("Aspirin","Alarm2"),
+
         )
 
         lifecycleScope.launch {

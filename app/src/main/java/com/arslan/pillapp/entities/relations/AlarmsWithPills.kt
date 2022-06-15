@@ -10,8 +10,8 @@ import com.arslan.pillapp.entities.Pill
 data class AlarmsWithPills (
     @Embedded val alarm: Alarm,
     @Relation(
-        parentColumn = "alarmId",
-        entityColumn = "pillId",
+        parentColumn = "alarmName",
+        entityColumn = "pillName",
         associateBy = Junction(PillAlarmCrossRef::class)
     )
     val alarms: List<Pill>

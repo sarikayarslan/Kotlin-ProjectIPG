@@ -6,7 +6,6 @@ import androidx.room.PrimaryKey
 @Entity
 data class Pill(
     @PrimaryKey(autoGenerate = false)
-    val pillId: String,
     val pillName: String,
     val Description: String,
     val Count: Int

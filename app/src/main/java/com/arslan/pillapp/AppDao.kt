@@ -20,12 +20,12 @@ interface AppDao{
     suspend fun insertPillAlarmCrossRef(crossRef: PillAlarmCrossRef)
 
     @Transaction
-    @Query("SELECT * FROM alarm WHERE alarmId = :alarmId")
-    suspend fun getPillsOfAlarm(alarmId: String): List<AlarmsWithPills>
+    @Query("SELECT * FROM alarm WHERE alarmName = :alarmName")
+    suspend fun getPillsOfAlarm(alarmName: String): List<AlarmsWithPills>
 
     @Transaction
-    @Query("SELECT * FROM pill WHERE pillId = :pillId")
-    suspend fun getAlarmsOfPill(pillId: String): List<PillWithAlarms>
+    @Query("SELECT * FROM pill WHERE pillName = :pillName")
+    suspend fun getAlarmsOfPill(pillName: String): List<PillWithAlarms>
 
 }
 
