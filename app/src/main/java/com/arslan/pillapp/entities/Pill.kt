@@ -8,7 +8,7 @@ data class Pill(
     @PrimaryKey(autoGenerate = false)
     val pillName: String,
     val Description: String,
-    val Count: Int
+    val Count: String
 
 
 )
