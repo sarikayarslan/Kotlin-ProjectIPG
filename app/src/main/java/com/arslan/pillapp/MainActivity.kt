@@ -2,6 +2,9 @@ package com.arslan.pillapp
 
 
 import android.os.Bundle
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.arslan.pillapp.entities.Alarm
@@ -11,9 +14,27 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
+
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
+        pillPageButton.setOnClickListener{
+            Toast.makeText(this,"İlaç butonuna basıldı",Toast.LENGTH_SHORT).show()
+        }
+        alarmPageButton.setOnClickListener{
+            Toast.makeText(this,"Alarm butonuna basıldı",Toast.LENGTH_SHORT).show()
+        }
+
+
+
+
+
+
 
         val dao = AppDatabase.getInstance(this).appDao
 
