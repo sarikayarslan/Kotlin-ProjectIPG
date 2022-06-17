@@ -27,5 +27,10 @@ interface AppDao{
     @Query("SELECT * FROM pill WHERE pillName = :pillName")
     suspend fun getAlarmsOfPill(pillName: String): List<PillWithAlarms>
 
+
+    @Transaction
+    @Query("SELECT * FROM pill")
+    suspend fun getPills(): List<Pill>
+
 }
 
